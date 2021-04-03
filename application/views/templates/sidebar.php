@@ -18,7 +18,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="<?php echo base_url('dashboard/index') ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -102,6 +102,20 @@
                             </div>
                         </div>
                     </form>
+
+                    <!-- Top Navbar Cart -->
+                    <div class="navbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <?php
+                                $keranjang = '<i class="fa fa-shopping-cart"></i><span class="badge badge-light">' . $this->cart->total_items() . '</span>'
+                                ?>
+
+                                <?php echo anchor('dashboard/detail_keranjang', $keranjang) ?>
+                            </li>
+
+                        </ul>
+                    </div>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">

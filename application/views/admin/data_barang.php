@@ -28,10 +28,10 @@
                         <div class="btn btn-sm btn-primary"><i class="fa fa-search fa-sm"></i></div>
                     </td>
                     <td>
-                        <div class="btn btn-sm btn-success"><i class="fa fa-edit fa-sm"></i></div>
+                        <?php echo anchor('admin/data_barang/edit/' . $brg->id_brg, '<div class="btn btn-sm btn-success"><i class="fa fa-edit fa-sm"></i></div>') ?>
                     </td>
                     <td>
-                        <div class="btn btn-sm btn-danger"><i class="fa fa-trash fa-sm"></i></div>
+                        <?php echo anchor('admin/data_barang/hapus/' . $brg->id_brg, '<div class="btn btn-sm btn-danger"><i class="fa fa-trash fa-sm"></i></div>') ?>
                     </td>
                 </tr>
 
@@ -51,7 +51,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="POST" enctype="multipart/form-data" action="<?php echo base_url() . 'admin/data_barang/tambah_aksi' ?>">
+                <form action="<?php echo base_url() . 'admin/Data_barang/tambah_aksi' ?>" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="namabarang">Nama Barang</label>
                         <input type="text" class="form-control" name="nama_brg">
@@ -79,7 +79,7 @@
                     </div>
                     <div class="form-group">
                         <label>Gambar</label>
-                        <input type="file" class="form-control" name="gambar_brg">
+                        <input type="file" class="form-control" name="gambar">
                     </div>
                     <div class="modal-footer">
                         <button type="reset" class="btn btn-secondary" data-dismiss="modal">Close</button>
