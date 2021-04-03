@@ -31,7 +31,7 @@
                     <p class="card-text small"><?php echo $brg->ket ?></p>
                     <span class="badge bg-success mb-3 text-white">Rp. <?php echo number_format($brg->harga, 0, ',', '.') ?></span> <br>
                     <?php echo anchor('dashboard/tambah_ke_keranjang/' . $brg->id_brg, '<div class="btn btn-primary btn-sm">Tambah ke keranjang</div>') ?>
-                    <a href="#" class="btn btn-success btn-sm">Detail</a>
+                    <?php echo anchor('dashboard/detail/' . $brg->id_brg, '<div class="btn btn-success btn-sm">Detail</div>') ?>
                 </div>
             </div>
         <?php endforeach; ?>
